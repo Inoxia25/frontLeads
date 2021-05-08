@@ -11,6 +11,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LeadCardComponent } from './lead-card/lead-card.component';
+import { CoolSocialLoginButtonsModule } from '@angular-cool/social-login-buttons';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { LeadCardComponent } from './lead-card/lead-card.component';
     MatButtonModule,
     MatToolbarModule,
     MatCardModule,
+    CoolSocialLoginButtonsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
