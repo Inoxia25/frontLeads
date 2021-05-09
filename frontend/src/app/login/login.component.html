@@ -1,0 +1,8 @@
+<div *ngIf="!user" class="btn btn-social-icon btn-google mx-1">
+    <button (click)="signInWithGoogle()"> Login in with Google </button>
+</div>
+
+<div *ngIf="user" class="btn btn-social-icon btn-google mx-1">
+    <button (click)="signOut"> Sign Out </button>
+</div>
+
