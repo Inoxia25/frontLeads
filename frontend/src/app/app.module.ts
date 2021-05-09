@@ -69,7 +69,11 @@ import {MatDialogModule} from '@angular/material/dialog';
           }
         ]
       } as SocialAuthServiceConfig,
-    }    
+    },
+  
+    LeadCardComponent
+    
+    
   ],
   bootstrap: [AppComponent]
 })

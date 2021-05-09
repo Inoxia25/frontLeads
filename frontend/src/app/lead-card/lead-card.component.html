@@ -50,7 +50,9 @@
     <mat-card-actions style="margin-left: 3%;">
       <br>
       <button mat-raised-button color="accent" >VERIFY THIS</button>
-      <!-- <button mat-raised-button color="accent" (click)="openDialog()" >VERIFY THIS</button> -->
+      <!-- <button *ngIf="user== null" mat-raised-button color="accent" (click)="openDialog()" >VERIFY THIS</button>
+      <button *ngIf="user!= null" mat-raised-button color="accent" (click)="openDialog()" >VERIFY THIS</button> -->
+      
       <button mat-raised-button color="accent" style="margin-left: 50px;">SHARE</button>
     </mat-card-actions>
     <p style="margin-left: 5.1%;">Already verified by 5 <mat-icon>person</mat-icon></p>

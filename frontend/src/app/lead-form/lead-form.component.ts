@@ -1,21 +1,6 @@
-// import { Component, OnInit } from '@angular/core';
-
-// @Component({
-//   selector: 'app-lead-form',
-//   templateUrl: './lead-form.component.html',
-//   styleUrls: ['./lead-form.component.css']
-// })
-// export class LeadFormComponent implements OnInit {
-
-//   constructor() { }
-
-//   ngOnInit(): void {
-//   }
-
-// }
-
 import { Component, OnInit } from '@angular/core';
-
+import { PassingDataService } from '../passing-data.service';
+import { LeadCardComponent } from '../lead-card/lead-card.component';
 @Component({
   selector: 'app-lead-form',
   templateUrl: './lead-form.component.html',
@@ -32,7 +17,7 @@ export class LeadFormComponent implements OnInit {
   public lead_description:string;
   public created:string;
 
-  constructor() {
+  constructor( private passingData: PassingDataService, private leadcard:LeadCardComponent) {
     this.lead_name="";
     this.city="";
     this.lead_phone="";
@@ -44,12 +29,26 @@ export class LeadFormComponent implements OnInit {
     this.created="";
    }
 
-   
+
   ngOnInit(): void {
   }
-  
+
 submit(){
+this.passingData.lead_obj={
+  "is_verified": this.is_verified,
+    "author_name":"",
+    "author_phone": this.author_phone,
+    "lead_phone": this.lead_phone,
+    "lead_name": this.lead_address,
+    "lead_type": this.lead_type,
+    "lead_description": this.lead_description,
+    "city": this.city,
+    "lead_address": this.lead_address,
+    "created": this.created
+    };
+this.leadcard.leads.push(this.passingData.lead_obj);
 
-
+console.log(this.leadcard.leads);
 }
+
 }
