@@ -18,6 +18,8 @@ import { MatInputModule } from '@angular/material/input';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatRadioModule } from '@angular/material/radio';
 import { LeadsServiceService} from './leads-service.service';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,6 +43,7 @@ import { LeadsServiceService} from './leads-service.service';
     MatRadioModule,
     HttpClientModule,
     
+    MatSnackBarModule,
   ],
   providers: [LeadsServiceService],
   bootstrap: [AppComponent]
