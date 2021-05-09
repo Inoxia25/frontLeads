@@ -17,6 +17,8 @@ import { MatSelectModule} from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatRadioModule } from '@angular/material/radio';
+import { LeadsServiceService} from './leads-service.service';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 import { SocialLoginModule, SocialAuthServiceConfig } from 'angularx-social-login';
 import { GoogleLoginProvider } from 'angularx-social-login';
@@ -44,6 +46,7 @@ import { LoginComponent } from './login/login.component';
     ReactiveFormsModule,
     MatInputModule,
     MatRadioModule,
+<<<<<<< HEAD
     SocialLoginModule
   ],
   providers: [
@@ -61,6 +64,13 @@ import { LoginComponent } from './login/login.component';
       } as SocialAuthServiceConfig,
     }
   ],
+=======
+    HttpClientModule,
+    
+    MatSnackBarModule,
+  ],
+  providers: [LeadsServiceService],
+>>>>>>> b9be3f194a0f2d5ccce5c40ef4849efb4e99062f
   bootstrap: [AppComponent]
 })
 export class AppModule { }
