@@ -1,3 +1,5 @@
+<!--
+
 <mat-card class="example-card">
     <mat-card-header>
       
@@ -21,6 +23,34 @@
     <mat-card-actions style="margin-left: 3%;">
       <br>
       <button mat-raised-button color="accent">VERIFY THIS</button>
+      <button mat-raised-button color="accent" style="margin-left: 50px;">SHARE</button>
+    </mat-card-actions>
+    <p style="margin-left: 5.1%;">Already verified by 5 <mat-icon>person</mat-icon></p>
+  </mat-card>
+-->
+
+
+  <mat-card class="example-card" *ngFor="let lead of leads">
+    <mat-card-header>
+      <mat-card-title>{{lead.lead_name}}</mat-card-title>
+      <mat-card-subtitle>Added By {{lead.author_name}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content style="margin-left: 3.5%;">
+      <p>
+       {{lead.lead_description}}
+      </p>
+      <br>
+      <mat-card-subtitle>Category: {{lead.lead_type}} </mat-card-subtitle>
+      <p>Contact Number of lead: {{lead.lead_phone}} </p>
+      <p>Full Address: {{lead.lead_address}} </p>
+      <p> City: {{lead.city}} </p>
+    </mat-card-content>
+    <mat-icon color="primary" style="margin-left: 3.5%;">calendar_today </mat-icon><span> Updated at {{lead.created}}</span>
+    <br>
+    <mat-card-actions style="margin-left: 3%;">
+      <br>
+      <button mat-raised-button color="accent" >VERIFY THIS</button>
+      <!-- <button mat-raised-button color="accent" (click)="openDialog()" >VERIFY THIS</button> -->
       <button mat-raised-button color="accent" style="margin-left: 50px;">SHARE</button>
     </mat-card-actions>
     <p style="margin-left: 5.1%;">Already verified by 5 <mat-icon>person</mat-icon></p>

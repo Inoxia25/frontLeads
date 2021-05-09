@@ -25,6 +25,8 @@ import { SocialLoginModule, SocialAuthServiceConfig } from 'angularx-social-logi
 import { GoogleLoginProvider } from 'angularx-social-login';
 import { LoginComponent } from './login/login.component';
 
+import {MatDialogModule} from '@angular/material/dialog';
+
 
 @NgModule({
   declarations: [
@@ -51,7 +53,8 @@ import { LoginComponent } from './login/login.component';
     MatRadioModule,
     MatSnackBarModule,
     MatSidenavModule,
-    SocialLoginModule
+    SocialLoginModule,
+    MatDialogModule
   ],
   providers: [
     {
