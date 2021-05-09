@@ -1,28 +1,11 @@
-// import { Component, OnInit } from '@angular/core';
-
-// @Component({
-//   selector: 'app-lead-card',
-//   templateUrl: './lead-card.component.html',
-//   styleUrls: ['./lead-card.component.css']
-// })
-// export class LeadCardComponent implements OnInit {
-
-//   constructor() { }
-
-//   ngOnInit(): void {
-//   }
-
-// }
-
-
-import { Component, OnInit } from '@angular/core';
+import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-lead-card',
   templateUrl: './lead-card.component.html',
   styleUrls: ['./lead-card.component.css']
 })
-export class LeadCardComponent implements OnInit {
+export class LeadCardComponent implements OnInit, OnChanges {
   leads: any;
  obj:any;
   constructor() { 
@@ -37,6 +20,11 @@ export class LeadCardComponent implements OnInit {
     "lead_address": "Near Champak road, Chennai",
     "created": "6:53PM, 9 May,2021"
     };
+    this.leads=[this.obj];
+  }
+  ngOnChanges(changes: SimpleChanges): void {
+    // throw new Error('Method not implemented.');
+    console.log('Hi');
     this.leads=[this.obj];
   }
 

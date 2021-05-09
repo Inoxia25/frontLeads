@@ -8,9 +8,9 @@
     </cool-google-button> 
   
 
-  <!-- <cool-google-button *ngIf="isSignedin === true" mat-raised-button color="light" (click)= "googleSignin()">
-    Logged in as {{SocialUser.firstName}}
-  </cool-google-button> -->
+   <cool-google-button *ngIf="user!= null" mat-raised-button color="light" (click)= "googleSignin()">
+    Logged in as {{user.name}}
+  </cool-google-button> 
   
       <button *ngIf="isSignedin === true" mat-raised-button color="light" (click)="logout()" class="btn btn-primary">Log Out</button>
       

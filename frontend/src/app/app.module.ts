@@ -71,7 +71,11 @@ import { FlexLayoutModule } from '@angular/flex-layout';
           }
         ]
       } as SocialAuthServiceConfig,
-    }    
+    },
+  
+    LeadCardComponent
+    
+    
   ],
   bootstrap: [AppComponent]
 })
