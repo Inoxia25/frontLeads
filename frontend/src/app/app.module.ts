@@ -17,7 +17,7 @@ import { MatSelectModule} from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatRadioModule } from '@angular/material/radio';
-
+import { LeadsServiceService} from './leads-service.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,8 +39,10 @@ import { MatRadioModule } from '@angular/material/radio';
     ReactiveFormsModule,
     MatInputModule,
     MatRadioModule,
+    HttpClientModule,
+    
   ],
-  providers: [],
+  providers: [LeadsServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
