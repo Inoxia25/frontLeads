@@ -21,12 +21,18 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { FilterComponent } from './filter/filter.component';
 import {MatSidenavModule} from '@angular/material/sidenav';
 
+import { SocialLoginModule, SocialAuthServiceConfig } from 'angularx-social-login';
+import { GoogleLoginProvider } from 'angularx-social-login';
+import { LoginComponent } from './login/login.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
     LeadCardComponent,
     LeadFormComponent,
-    FilterComponent
+    FilterComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -45,8 +51,23 @@ import {MatSidenavModule} from '@angular/material/sidenav';
     MatRadioModule,
     MatSnackBarModule,
     MatSidenavModule,
+    SocialLoginModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: 'SocialAuthServiceConfig',
+      useValue: {
+        autoLogin: false,
+        providers: [
+          {
+            id: GoogleLoginProvider.PROVIDER_ID,
+            provider: new GoogleLoginProvider('626624130121-jhr1s29frb9hmf8kjsms9hv4r09o1pej.apps.googleusercontent.com')
+
+          }
+        ]
+      } as SocialAuthServiceConfig,
+    }    
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
