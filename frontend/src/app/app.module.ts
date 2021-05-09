@@ -26,6 +26,7 @@ import { GoogleLoginProvider } from 'angularx-social-login';
 import { LoginComponent } from './login/login.component';
 
 import {MatDialogModule} from '@angular/material/dialog';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 
 @NgModule({
@@ -54,7 +55,8 @@ import {MatDialogModule} from '@angular/material/dialog';
     MatSnackBarModule,
     MatSidenavModule,
     SocialLoginModule,
-    MatDialogModule
+    MatDialogModule,
+    FlexLayoutModule,
   ],
   providers: [
     {
